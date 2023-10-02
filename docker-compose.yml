@@ -1,0 +1,18 @@
+ version: "3.3"
+
+ services:
+   games_service:
+     build: ./games_service
+     image: alejandrocolfer/games_service
+     ports:
+       - 8800:8800
+   users_service:
+     build: ./users_service
+     image: alejandrocolfer/users_service
+     ports:
+       - 8000:8000
+   frontend:
+      build: ./frontend
+      image: alejandrocolfer/frontend
+      ports:
+        - 8080:8080
